@@ -1,7 +1,6 @@
 package AP3;
 
 import java.io.Serializable;
-
 public class Elefante implements Serializable {
     private String nome;
     private int idade;
