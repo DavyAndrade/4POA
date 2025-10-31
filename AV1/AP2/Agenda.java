@@ -1,4 +1,4 @@
-package AP2;
+package AV1.AP2;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
