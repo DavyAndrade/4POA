@@ -27,6 +27,17 @@
                 }
             }
         </script>
+        <script>
+                // Aplicar tema imediatamente para evitar "piscar"
+                (function () {
+                    const savedTheme = localStorage.getItem('darkMode') === 'true';
+                    if (savedTheme) {
+                        document.documentElement.classList.add('dark');
+                    }
+                    // Adicionar classe para desabilitar transições durante carregamento
+                    document.documentElement.classList.add('theme-loading');
+                })();
+        </script>
         <style>
             body {
                 box-sizing: border-box;
@@ -156,10 +167,15 @@
                                     <select
                                         class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white">
                                         <option>Todas as áreas</option>
-                                        <option>Tecnologia</option>
-                                        <option>Design</option>
-                                        <option>Marketing</option>
-                                        <option>Administração</option>
+                                        <option>Back-end</option>
+                                        <option>Front-end</option>
+                                        <option>Full Stack</option>
+                                        <option>Cyber Security</option>
+                                        <option>Data Science</option>
+                                        <option>Mobile</option>
+                                        <option>DevOps</option>
+                                        <option>Blockchain</option>
+                                        <option>Game Developer</option>
                                     </select>
                                 </div>
                                 <div>
@@ -169,7 +185,9 @@
                                         class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white">
                                         <option>Todos os tipos</option>
                                         <option>Estágio</option>
-                                        <option>Emprego</option>
+                                        <option>Trainee</option>
+                                        <option>CLT</option>
+                                        <option>PJ</option>
                                     </select>
                                 </div>
                             </div>
@@ -234,7 +252,7 @@
                                         <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Tech Solutions</td>
                                         <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Desenvolvedor Java Jr
                                         </td>
-                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Tecnologia</td>
+                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Back-end</td>
                                         <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Estágio</td>
                                         <td class="py-3 px-4">
                                             <button
@@ -246,9 +264,9 @@
                                     <tr
                                         class="border-b border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-slate-700">
                                         <td class="py-3 px-4 text-gray-600 dark:text-gray-300">DataCorp</td>
-                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Analista de Dados</td>
-                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Análise</td>
-                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Emprego</td>
+                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Analista de Dados Jr</td>
+                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Data Science</td>
+                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">CLT</td>
                                         <td class="py-3 px-4">
                                             <button
                                                 class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm">
@@ -258,9 +276,9 @@
                                     </tr>
                                     <tr
                                         class="border-b border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-slate-700">
-                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">WebDesign Pro</td>
-                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Designer UX/UI</td>
-                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Design</td>
+                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">WebSolutions</td>
+                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Desenvolvedor Front-end Jr</td>
+                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Front-end</td>
                                         <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Estágio</td>
                                         <td class="py-3 px-4">
                                             <button
@@ -270,10 +288,9 @@
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50 dark:hover:bg-slate-700">
-                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Marketing Digital</td>
-                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Assistente de Marketing
-                                        </td>
-                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Marketing</td>
+                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Tech Solutions</td>
+                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Desenvolvedor Fullstack Jr</td>
+                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Fullstack</td>
                                         <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Estágio</td>
                                         <td class="py-3 px-4">
                                             <button

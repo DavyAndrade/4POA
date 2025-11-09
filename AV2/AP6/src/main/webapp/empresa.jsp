@@ -27,6 +27,17 @@
                 }
             }
         </script>
+        <script>
+                // Aplicar tema imediatamente para evitar "piscar"
+                (function () {
+                    const savedTheme = localStorage.getItem('darkMode') === 'true';
+                    if (savedTheme) {
+                        document.documentElement.classList.add('dark');
+                    }
+                    // Adicionar classe para desabilitar transições durante carregamento
+                    document.documentElement.classList.add('theme-loading');
+                })();
+        </script>
         <style>
             body {
                 box-sizing: border-box;
@@ -162,10 +173,15 @@
                                     <select
                                         class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white">
                                         <option>Selecione a área</option>
-                                        <option>Tecnologia</option>
-                                        <option>Design</option>
-                                        <option>Marketing</option>
-                                        <option>Administração</option>
+                                        <option value="backend">Back-end</option>
+                                        <option value="frontend">Front-end</option>
+                                        <option value="fullstack">Full Stack</option>
+                                        <option value="cybersecurity">Cyber Security</option>
+                                        <option value="datascience">Data Science</option>
+                                        <option value="mobile">Mobile</option>
+                                        <option value="devops">DevOps</option>
+                                        <option value="blockchain">Blockchain</option>
+                                        <option value="gamedeveloper">Game Developer</option>
                                     </select>
                                 </div>
                                 <div>
@@ -174,8 +190,10 @@
                                     <select
                                         class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white">
                                         <option>Selecione o tipo</option>
-                                        <option>Estágio</option>
-                                        <option>Emprego</option>
+                                        <option value="estagio">Estágio</option>
+                                        <option value="trainee">Trainee</option>
+                                        <option value="clt">CLT</option>
+                                        <option value="pj">PJ</option>
                                     </select>
                                 </div>
                             </div>
@@ -234,8 +252,8 @@
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50 dark:hover:bg-slate-700">
-                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Designer UX/UI</td>
-                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Design</td>
+                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Desenvolvedor Front-end Jr</td>
+                                        <td class="py-3 px-4 text-gray-600 dark:text-gray-300">Front-end</td>
                                         <td class="py-3 px-4 text-gray-600 dark:text-gray-300">8</td>
                                         <td class="py-3 px-4">
                                             <span

@@ -8,6 +8,21 @@
     width: 5rem !important;
 }
 
+/* Disable overflow when sidebar is collapsed */
+.sidebar-nav-collapsed {
+    overflow-y: hidden !important;
+}
+
+/* Prevent sidebar flicker during load */
+.sidebar-loading {
+    transition: none !important;
+}
+
+/* Prevent theme flicker during load */
+.theme-loading * {
+    transition: none !important;
+}
+
 .sidebar-collapsed .sidebar-title {
     display: none;
 }

@@ -27,6 +27,17 @@
                 }
             }
         </script>
+        <script>
+                // Aplicar tema imediatamente para evitar "piscar"
+                (function () {
+                    const savedTheme = localStorage.getItem('darkMode') === 'true';
+                    if (savedTheme) {
+                        document.documentElement.classList.add('dark');
+                    }
+                    // Adicionar classe para desabilitar transições durante carregamento
+                    document.documentElement.classList.add('theme-loading');
+                })();
+        </script>
         <style>
             body {
                 box-sizing: border-box;
@@ -176,10 +187,14 @@
                                 <select
                                     class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white">
                                     <option>Selecione seu curso</option>
-                                    <option>Análise e Desenvolvimento de Sistemas</option>
+                                    <option>Ciência da Computação</option>
+                                    <option>Engenharia de Computação</option>
+                                    <option>Engenharia de Software</option>
                                     <option>Sistemas de Informação</option>
-                                    <option>Design Digital</option>
-                                    <option>Marketing Digital</option>
+                                    <option>Análise e Desenvolvimento de Sistemas</option>
+                                    <option>Ciência de Dados</option>
+                                    <option>Segurança da Informação</option>
+                                    <option>Redes de Computadores</option>
                                 </select>
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
